@@ -6,6 +6,7 @@
 # nth_power and the nth_pow helps us to find the root. Both functions do the same thing but the nth_power takes less time as it calculates a better value for the lower limit
 # both functions use binary search to find the root you can google it.
 # To use this solution just paste the value of your n, c and e value in the lower given variables and run it 
+# After runnig it please be patient it takes FEW SECONDS TO PRINT THE RESULT
 # this solution worked for me but it might not for you because I might have made some mistake so sorry
 
 import binascii
