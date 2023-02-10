@@ -1,3 +1,17 @@
+# To make this solution in used various resources 
+# I read this wikipedia page about weiner attacks https://en.wikipedia.org/wiki/Wiener%27s_attack
+# to get a better understanding about how this works I saw this video https://www.youtube.com/watch?v=OpPrrndyYNU&t=613s
+# after that I studied about what are continued fractions from this page https://en.wikipedia.org/wiki/Continued_fraction#:~:text=In%20mathematics%2C%20a%20continued%20fraction,another%20reciprocal%2C%20and%20so%20on.
+# after doing the above i made this jank solution 
+# I made this since i was not able to use the already mention solutions 
+# the findConvergent methods takes in a array of all the continued fractions and gives the value of single convergent
+# the getContinuedFraction function takes a N and e value and empty array and then find all the continued fractions value  and returns array
+# the getAllConvergent loops throught the entire continued fraction array and finds all the convergents
+# now we use for loop to loop through all the value of convergents and igonre the values which are even or don't give us a whole value of the fiN
+# and the we use the methods explained in the winer attack video link above.
+# To get this working paste your n, c, e value in the variables from the webshell on picoCTF website.
+# This worked for me and it might not work for you because there might be some mistake i made in this so sorry.
+
 import binascii
 
 def findConvergent(continuedFraction):
