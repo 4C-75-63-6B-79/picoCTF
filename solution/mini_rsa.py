@@ -1,3 +1,13 @@
+# READ THIS
+# We know that e is small
+# so what we can do here is we can multiply n with integers and add c to the product like this n * i + c where i is (0,1,2,3,4....) 
+# then what we can do is find the  eth root of the obatined value
+# we can then convert the eth root to hex value and see if the hex value of pico which is 7069636f is present in that if yes then we convert that to plain text
+# nth_power and the nth_pow helps us to find the root. Both functions do the same thing but the nth_power takes less time as it calculates a better value for the lower limit
+# both functions use binary search to find the root you can google it.
+# To use this solution just paste the value of your n, c and e value in the lower given variables and run it 
+# this solution worked for me but it might not for you because I might have made some mistake so sorry
+
 import binascii
 
 def nth_power(number, root): #optimized
