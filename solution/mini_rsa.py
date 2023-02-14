@@ -30,7 +30,7 @@ def nth_power(number, root): #optimized
             return mid
     return mid + 1;
 
-
+# Personal Notes
 # i think that we take the words and covert them into some hex
 # add a bunch of gibbrish to it and then convert that number to the int
 # then do rsa shit on it
