@@ -73,9 +73,15 @@
 - Looked up the first hint which is **[Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)**.
 - This encryption is such that we can do operations on the encrypted form of data. The result of the operation is also encrypted. When this result is decrypted it is same as if the operation is performed on the decrypted original data.
 - Googled 'Homomorphic encryption + cookies' found a ctf writeup which mentioned that there are words which capital letters in the problem description Cookies, Be Client. It also mentioned about CBC bit flip.
-- Google CBC bit flip. Read this [article](https://bernardoamc.com/cbc-bitflipping-attack/#:~:text=Bitflipping%20Attack,in%20the%20next%20ciphertext%20block.) and [this](https://resources.infosecinstitute.com/topic/cbc-byte-flipping-attack-101-approach/).
-- Watched this example of CBC encryption [video](https://www.youtube.com/watch?v=_aZQFXnnoO4). Got the basic understanding of what we do in CBC.
+- Googled what is CBC. Watched this example of CBC encryption [video](https://www.youtube.com/watch?v=_aZQFXnnoO4). Got the basic understanding of what we do in CBC.
 - Watched one more [video](https://www.youtube.com/watch?v=Rk0NIQfEXBA). Understood that CBC is a mode of operation. Other modes of operation are EBC and Conter mode.
+- Google CBC bit flip. Read this [article](https://bernardoamc.com/cbc-bitflipping-attack/#:~:text=Bitflipping%20Attack,in%20the%20next%20ciphertext%20block.) and [this](https://resources.infosecinstitute.com/topic/cbc-byte-flipping-attack-101-approach/). Both have examples describing what happens in bitflip attack but I did not understand either of them.
+- Read [this](https://github.com/HHousen/PicoCTF-2021/tree/master/Web%20Exploitation/More%20Cookies) and got the understanding why we are trying to CBC bit flip attack. This writeup suggested to read this [article](https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode/66086#66086) which explain in detail what happens in CBC bit flip attack.
+- Then I copied the code and tried to make it run and understand what the code is doing.
+- Watched this [video](https://www.youtube.com/watch?v=i9KiOjeE-VY) and followed his solution.
+- The problem was that running for the 0th postion was taking a long time and also connection was timing out.
+- So I increased the char_postion to 12 seeing that the solution is at 13 postion.
+- flag: picoCTF{cO0ki3s_yum_82f39377}
 </details>
 
 
