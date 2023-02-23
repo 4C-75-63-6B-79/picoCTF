@@ -17,31 +17,35 @@
 # flag = picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
 
 
-def rotateAlpha(letter, key, start):
-    asciiVal = ord(letter);
-    rotVal = ((asciiVal + key - start) % 26);
-    if(rotVal == 0):
-        rotVal = 26;
-    return chr(start+rotVal);
+# rotates a single letter
+def rotAlpha(alpha, key, start):
+	return chr(start + ((ord(alpha) - start + key)%26))
 
-def rotateString(word, key):
-    result = '';
-    key = key % 26;
-    for i in word:
-        asciiVal = ord(i);
-        if( 65 <= asciiVal <= 90):
-            result = result + rotateAlpha(i, key, 64);
-        elif( 97 <= asciiVal <= 122):
-            result = result + rotateAlpha(i, key, 96);
-        else:
-            result = result + i;
-    
-    return result;
+# rotates and returns the entire word as string
+def rotateWord(word, key):
+	rotatedWord = ''
+	for i in word:
+		if 65 <= ord(i) <= 90:
+			rotatedWord += rotAlpha(i, key, 65)
+		elif 97 <= ord(i) <= 122:
+			rotatedWord += rotAlpha(i, key, 97)
+		else:
+			rotatedWord += i
+	return(rotatedWord)
+	
+	
+def printAllCipher(word):
+	for i in range(26):
+		print(rotateWord(word, i))
 
+word = ''
+print('Enter 0 to end the program.')
 
-word = input('Enter the word to decipher');
-print(word)
-for i in range(1,27):
-    print('value of key', i);
-    print('decipher text', rotateString(word, i));
+# loops take input until user enter 0
+while not (word == '0'):
+	word = input('Enter word to be deciphered: ')
+	if(word == '0'):
+		print('program exit');
+		break
+	printAllCipher(word)
 
