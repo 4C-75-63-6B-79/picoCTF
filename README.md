@@ -84,6 +84,21 @@
 - flag: picoCTF{cO0ki3s_yum_82f39377}
 </details>
 
+<details>
+<summary>where are the robots?</summary>
+
+### Where are the robots
+- Doing the usual inspection of the source style thing in the dev tools.
+- In cookies found things looking like base64 encoded.
+- Nothing useful in the decoded base64.
+- Looked the hint understood nothing.
+- Googled about the challenge. Found that we need to find the **robots.txt** file.
+- **Robots.txt** file tells search engine web crawlers to not index the page that are not meant for public view.
+- Watched this [video](https://www.youtube.com/watch?v=pdMMq64D0OU).
+- type "robots.txt" the url of the challenge website.
+- get .html link paste that in the place of robots.txt in the url
+- flag: picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}
+</details>
 
 <details>
 <summary>Template</summary>
