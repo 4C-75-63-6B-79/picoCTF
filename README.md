@@ -101,6 +101,25 @@
 </details>
 
 <details>
+<summary>No Padding, No Problem</summary>
+
+### No Padding, No Problem
+
+#### Wrong Approach
+- First thing I did was to go back to [mini_rsa.py](/solution/mini_rsa.py) file and then read the personal notes to get a idea of how to encode a text using RSA.
+- Since we have n and e so we can encode the text. Since in the challenge it is mentioned that no padding which might mean that the text is encoded as it is.
+- From [mini_rsa](/solution/mini_rsa.py) we know that the length of the ciphered text is double of the deciphered text.
+- We know that the total length of the ciphered text in this problem is 308 so the length of the deciphered text may be 308 / 2 = 154.  
+- So we are going to take the text 'picoCTF{' and add bunch of space (ASCII = 32) so that the length of the string to be encoded is 153 and then at the end we will add }. The process of the encoding can be seen in [no_padding_no_problem.py](/solution/no_padding_no_problem.py) in function encodeInRsa.
+- What ever you read above is not true since the length of the cipher text is reduced to 307 as seen when the program ran.
+
+#### Correct Approach
+- What I did not see that we can give it the ciphered text to decrypt.
+- So I gave it 0 and 1. I would have raised it to power d but the answer would have been 0 and 1 respectively. 
+- When entered 2 it returned a decrypted_value. Since we have n and the decryption of the 2, we might be able to find the d. decrypted_value = (2 ** d) % n.
+</details>
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
