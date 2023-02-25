@@ -114,9 +114,20 @@
 - What ever you read above is not true since the length of the cipher text is reduced to 307 as seen when the program ran.
 
 #### Correct Approach
-- What I did not see that we can give it the ciphered text to decrypt.
+- What I did not see that we can give it the ciphered text to decrypt?
 - So I gave it 0 and 1. I would have raised it to power d but the answer would have been 0 and 1 respectively. 
 - When entered 2 it returned a decrypted_value. Since we have n and the decryption of the 2, we might be able to find the d. decrypted_value = (2 ** d) % n.
+- The d value can be found using two approach described below.
+- Created a function findPowerOf2 in [no_padding_no_problem.py](/solution/no_padding_no_problem.py) that take in a number and returns the value of the power to which 2 should be raised to get that number.
+- Or can directly run a while loop raising 2 to power 1,2,3.. and so on and mod with n till we get the decrypted_value when we enter 2. Tried this uptil 1500000.
+- I tried both of the 2 ways but even after large number of iterations no answer was coming. 
+- Googled about the problem.
+- Read [this](https://ctftime.org/writeup/32010) solution which suggested to give the program to decrypt c+n value. I did not understand why this will work.
+- Then read [this](https://github.com/Dvd848/CTFs/blob/master/2021_picoCTF/No_Padding_No_Problem.md) solution which mentioned that the unpadded RSA is homomorphic which we have read about in the the **More Cookies** challenge.
+- Homomorphic encryption is such that when any operation is performed on the encrypted text and then if this is decrypted it will be same as if the operation is performed on the decrypted text.
+- And on reading the [second](https://github.com/Dvd848/CTFs/blob/master/2021_picoCTF/No_Padding_No_Problem.md) solution we see how the use the homomorphic property.
+- Used the first solution to get the result. I did not understand why the first method works.
+- flag: picoCTF{m4yb3_Th0se_m3s54g3s_4r3_difurrent_0801973}
 </details>
 
 <details>
