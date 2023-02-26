@@ -36,7 +36,7 @@ def rotateWord(word, key):
 	
 def printAllCipher(word):
 	for i in range(26):
-		print(rotateWord(word, i))
+		print("key:", i, rotateWord(word, i))
 
 word = ''
 print('Enter 0 to end the program.')
