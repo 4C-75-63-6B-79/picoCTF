@@ -224,6 +224,15 @@
 - flag: picoCTF{no_clients_plz_b706c5}
 </details>
 
+<details>
+<summary>Bases</summary>
+
+### Bases
+- Looking at the string in the problem description. It looks like base64 encoded.
+- One can use this [program](./solution/bases.py) or [this online base 64 decoder](https://www.base64decode.org/) to decode the string.
+- Just run the program and enter the encoded string and output is the flag value.
+- picoCTF{l3arn_th3_r0p35}
+</details>
 
 <details>
 <summary>Template</summary>
