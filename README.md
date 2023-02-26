@@ -210,6 +210,22 @@
 </details>
 
 <details>
+<summary>dont-use-client-side</summary>
+
+### dont-use-client-side
+- Opened the link and went to source.
+- Saw that the password verfication was done in function veify. 
+- And there was the flag in some form of jumbled form.
+- verify function was selecting the element with id pass and getting it's value.
+- Then it was checking if the substring 0 to 4 is pico. It is at a single time checking 4 characters. And similary if we calculate the value of the start and end in substring we can piece together the flag.
+- We can look at the start index of the substring method in order of 0, split, split*2, split*3 and so on. And then put the value to which these substring are compared in order to get the flag.
+- Or you can also use this [program](./solution/dont_use_client_side.py) to piece the flag together. All you have to do is paste in all the if conditions in the verify function in the source. If the program does not work for you sorry.
+- Sorry if used something in the regex worngly.
+- flag: picoCTF{no_clients_plz_b706c5}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
