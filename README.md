@@ -187,6 +187,15 @@
 - flag: picoCTF{th3_c0nsp1r4cy_l1v3s_0c98aacc}
 </details>
 
+<details>
+<summary>13</summary>
+
+### 13
+- This might be a ceaser cipher with key 13.
+- Used the [trival_flag_transfer.py](./solution/trivial_Flag_transfer.py) program as there is ceaser cipher in there.
+- The program will print the decipherd text for all the 26 key. The key here is most probably 13.
+- flag: picoCTF{not_too_bad_of_a_problem}
+</details>
 
 <details>
 <summary>Template</summary>
