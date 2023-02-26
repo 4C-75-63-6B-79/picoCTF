@@ -167,6 +167,26 @@
 - flag: picoCTF{cryptoisfun}
 </details>
 
+<details>
+<summary>logon</summary>
+
+### logon
+- Logged in using joe. Did not enter the password. Success you have logged in but no flag happened.
+- Logged in as joe using password as password. Success you have logged in but no flag happened.
+- Looked at the cookies. Saw cookies admin, username, password, __cf_bm, PHPSESSID.
+- __cf_bm is something related to bots and PHPSESSID is some kind of session id.
+- admin was false. Tried setting it to true. Nothing useful happened.
+- Looked at the hint. 
+- Logged in as human with password as password. Success you have logged in but no flag happened.
+- Then realized if the joe is case sensitive. Logged in as Joe with no password gave an error "I'm sorry Joe's password is super secure. You're not getting in that way.
+"
+- Tried logging in as Joe this time with password as password. Same above error.
+- Logged in as human and then clicked home and then tried logging in as Joe smae as above error.
+- Googled about the problem.
+- Saw this [video](https://www.youtube.com/watch?v=6IHI0teB7ek). Realized that what I did with the admin cookie previously was correct what I did wrong was not make T capital in True.
+- flag: picoCTF{th3_c0nsp1r4cy_l1v3s_0c98aacc}
+</details>
+
 
 <details>
 <summary>Template</summary>
