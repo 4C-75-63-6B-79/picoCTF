@@ -156,6 +156,19 @@
 </details>
 
 <details>
+<summary>Easy 1</summary>
+
+### Easy 1
+- wget the table.
+- Encrypted flag: UFJKXQZQUNB key: SOLVECRYPTO
+- Google about the one time pad. Read the [wikipedia article](https://en.wikipedia.org/wiki/One-time_pad) on it mainly the example section.
+- When you read the example you will get the idea of how to decrypt the flag.
+- I made this small [program](/solution/easy_1.py) to decrypt flag. You just have to enter the encrypted flag and the key when you run the program.
+- flag: picoCTF{cryptoisfun}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
