@@ -131,6 +131,17 @@
 </details>
 
 <details>
+<summary>Vault Door 1</summary>
+
+### Vault Door 1
+- On reading the program understood that if I enter a password with length less than 8 the program will break, since it is taking the substring of password from letter 8.
+- On examining the checkPassword function we can put all the letter in the respective index position to obtain the thing which is probably the flag.
+- I wrote this small [python program](/solution/vault_door_1.py) to obtain the flag. I am sorry if I did not use the regular expression correctly.
+- flag: picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_f6daf4}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
