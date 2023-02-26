@@ -140,6 +140,20 @@
 - flag: picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_f6daf4}
 </details>
 
+<details>
+<summary>Strings It</summary>
+
+### Strings It
+- Downloaded the file and opened it online [hex editor](https://hexed.it/). Saw that it is a elf file.
+- The problem mentioned to not run the file. I don't know how to run the file.
+- Looked at the hint. Hint opens a page to the strings command. 
+- Run the strings command on the strings file. See a lot of lines of string that look like base 64 encoded. Try to decode a few using copy paste and python. Get error incorrect padding.
+- Used the strings command on the strings file and created the file.txt out of the output of the strings command. strings strings >> file.txt.
+- Opened the file.txt in nano and tried to ctrl + w to find the picoCTF. But doing this on the browser shell closed the window.
+- So googled about the challenge and found we can use command grep to find the picoCTF in the file.txt.
+- command cat file.txt | grep picoCTF
+- flag: picoCTF{5tRIng5_1T_7f766a23}
+</details>
 
 <details>
 <summary>Template</summary>
