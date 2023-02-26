@@ -198,6 +198,18 @@
 </details>
 
 <details>
+<summary>caesar</summary>
+
+### Caesar
+- Here we are given a message in it's encrypted form. 
+- Tried ceaser cipher on it using the [trival_flag_transfer.py](/solution/trivial_Flag_transfer.py)
+- Got all the 26 rotations. Tried looking through them if any of then are meaningful phrases.
+- This phrase looked meaningful "crossingtherubicondjneoach".
+- Submitted it and it was the flag.
+- flag: picoCTF{crossingtherubicondjneoach}
+</details>
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
