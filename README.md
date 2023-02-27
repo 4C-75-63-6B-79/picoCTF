@@ -235,6 +235,18 @@
 </details>
 
 <details>
+<summary>First Grep</summary>
+
+### First grep
+- I have already read about this command while doing the previous problems.
+- I helps us to find the patterns in files. I can do a lot more but I know only the basic stuff about it.
+- One can read about grep by typing **man grep** in webshell.
+- Typed this in webshell **grep picoCTF file**.
+- flag: picoCTF{grep_is_good_to_find_things_5af9d829}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
