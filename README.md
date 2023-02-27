@@ -245,6 +245,24 @@
 - flag: picoCTF{grep_is_good_to_find_things_5af9d829}
 </details>
 
+<details>
+<summary>Pixelated</summary>
+
+### Pixelated
+- Downloaded the 2 images on to my computer looked at them both were like noise on old TV Screen but coloured.
+- Looked at their size on disk but it was not large so no nothing in the zip format stored in them.
+- Looked at the first hint which ahd a link to wikipedia article on [Visual Cryptography](https://en.wikipedia.org/wiki/Visual_cryptography). Read it.
+- In the example section the article talks about how we can change the pixel values so that when the 2 images are stacked on top of each other we will get the original image.
+- Looked at the second hint which also talked about stacking the 2 images.
+- Tried to stack images using gimp and playing with different modes. Nothing useful happened.
+- Google about the problem. Found [this](https://picoctf2021.haydenhousen.com/cryptography/pixelated) writeup which had [this](https://github.com/HHousen/PicoCTF-2021/blob/master/Cryptography/Pixelated/script.py) script. 
+- The above script was using some libraries I did not understand what those libraries were doing.
+- Watched [video](https://www.youtube.com/watch?v=e7Yx2nxGcqU) on the problem. What we actually have to do is to add the 2 images. Like add the red, blues and greens. Same as the wikipedia article but it was with black and white.
+- I have read about manipulating images in the book **Automate the boring stuff with python** in [chapter 19](https://automatetheboringstuff.com/2e/chapter19/). So I went there to refresh a few things.
+- After reading the chapter 19 created the [program](/solution/pixelated.py) to get the flag. Before running the program make sure that you have pillow module installed on your system.
+- In the program we are using the module pillow about which you can find more at [here](https://pypi.org/project/Pillow/).
+- flag: picoCTF{da8fcef8}
+</details>
 
 <details>
 <summary>Template</summary>
