@@ -265,6 +265,28 @@
 </details>
 
 <details>
+<summary>It is my Birthday</summary>
+
+### It is my Birthday
+- Opened the website went straight to the cookies section.
+- Uploaded a single file gave error file too large.
+- Uploaded no file and gave error no file.
+- Created a file with 1 as the content and uploaded same in both gave error files are not different and no change in the cookie.
+- Created another file with 2 as the content and uploader 1 in first and 2 in the other and gave error MD5 don't match.
+- Added a invisible space to the pdf as content 1 got same error MD5 hashes don't match.
+- Googled the MD5 hashes of pdf. Read [this](https://cs.indstate.edu/~fsagar/doc/paper.pdf).
+- MD5 hashes is used to verify the file downloaded from server is same or not. This is done by creating MD5 on the server and then when file is downloaded if both are same then file is ok. 
+- MD5 is not collision free which means that for two different inputs we can have same output.
+- So our objective is to have 2 pdfs whoes MD5 hashes are same but they are different in some way. To have same md5 hashes we must some how use the collision thing.
+- Since I have no idea on how to make pdf which are different but have same MD5 hashes I looked the hints.
+- Hints mentioned to look at the category of the problem which is Web Exploitation and the second one said how many PHP sites check the rule in description. I did not understood anything from the hints.
+- Googled how to make 2 pdf files with same md5 Hashes. Did not find a way to make such file.
+- Then googled 2 files which have same md5 hash. Found [this](https://security.stackexchange.com/questions/21081/program-binaries-or-files-with-same-md5-hash) which has a link to [this](https://www.mathstat.dal.ca/~selinger/md5collision/) which had [link](http://web.archive.org/web/20071226014140/http://www.cits.rub.de/MD5Collisions/) to [script1](http://web.archive.org/web/20071226014140/http://www.cits.rub.de/imperia/md/content/magnus/letter_of_rec.ps) and [script2](http://web.archive.org/web/20071226014140/http://www.cits.rub.de/imperia/md/content/magnus/order.ps) with same MD5 hashes.
+- I renamed those 2 files extentions to pdf.
+- It worked and opened some program which had the flag.
+- flag: picoCTF{c0ngr4ts_u_r_1nv1t3d_40d81ca2}
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
