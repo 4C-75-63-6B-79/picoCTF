@@ -410,6 +410,31 @@
 </details>
 
 <details>
+<summary>Who are you?</summary>
+
+### Who are you?
+- Opened the website. Found no buttons to interact.
+- A gif load with text wait a minute who are you? 
+- There is script in the source with click event listener on element with class close. On click it will select myAlert element and alert close. But there is no button to click on page.
+- Looked at the hint: It ain't much, but it's an RFC https://tools.ietf.org/html/rfc2616
+- This is a document on HTTP/1
+- Looked in the cookie section nothing found.
+- Googled the challenge. Watched [this](https://www.youtube.com/watch?v=su1XD3x5k_E) and [this](https://www.youtube.com/watch?v=lldA9BDjZyw) video.
+- Did not understand anything form the 1st video.
+- Second video told RFC stands for Request for comments.
+- Read [this](https://ctftime.org/writeup/26905) write up. And followed it with the various links it has.
+- The site mentions it allows only pico browsers user. So we need to use the header user-agent with value PicoBrowser. User-agent header tells the server the application name of the user in this case PicoBrowser. command used here: **wget --user-agent="PicoBrowser" http://mercury.picoctf.net:39114/**
+- We get a index.html file on cat it we see I don't trust users from another site. [Writeup](https://ctftime.org/writeup/26905) suggest us to use referer header here. Referer header contains the partial or full url of the site from which the resource has been requested. This tell the server that where the resource is being used. command here used: **wget --user-agent='PicoBrowser' --referer='http://mercury.picoctf.net:39114/' http://mercury.picoctf.net:39114/**
+- We get another index.html. On cat it we see Sorry this site only worked in 2018. [Writeup](https://ctftime.org/writeup/26905) suggest us to use Date header here. Date and time header tells the server at which date and time the request was originated. So here we need to set some date in the year 2018. command used here: **wget --user-agent='PicoBrowser' --referer='http://mercury.picoctf.net:39114/' http://mercury.picoctf.net:39114/ --header='Date: 2018'**
+- We get another index.html which says that I don't trust users which can be tracked. [Writeup](https://ctftime.org/writeup/26905) suggest us to use DNT header here. It tells the server that user prefers not to be tracked. command used here is: **wget --user-agent='PicoBrowser' --referer='http://mercury.picoctf.net:39114/' http://mercury.picoctf.net:39114/ --header='Date: 2018' --header='DNT: dnt'**
+- We get another index.html which say this site is only for people form sweden. [Writeup](https://ctftime.org/writeup/26905) suggest us to use X-Forwarded-For header here. When user requests something directly form the server the user IP address is written in server logs. But if there are proxies in connection then the ip address of the final proxy is passed to the server which of no use for the server. So to pass a more useful IP address of the client X-forwarded-for header is used. [Writeup](https://ctftime.org/writeup/26905) also suggests us to find a swedish IP address. I used this 31.3.152.55. Command used here is: **wget --user-agent='PicoBrowser' --referer='http://mercury.picoctf.net:39114/' http://mercury.picoctf.net:39114/ --header='Date: 2018' --header='DNT: dnt' --header="X-Forwarded-For: 31.3.152.55"**
+- We get anohter index.html file which says that we are from sweden but don't speak swedish. [Writeup](https://ctftime.org/writeup/26905) suggest us to use Accept-language header here. This header tells the server about the local language that the user prefers. The value of this header is set by browser depending on the language of the user-interface. Command user here: **wget --user-agent='PicoBrowser' --referer='http://mercury.picoctf.net: http://mercury.picoctf.net:39114/ --header='Date: 2018' --header='DNT: dnt' --header="X-Forwarded-For: 31.3.152.55" --header="Accept-language: sv"**
+- We get another index.html which has the flag.
+- flag: picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_20ace0e4}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
