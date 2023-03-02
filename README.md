@@ -433,6 +433,22 @@
 - flag: picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_20ace0e4}
 </details>
 
+<details>
+<summary>login</summary>
+
+### login
+- Description: My dog-sitter's brother made this website but I can't get in; can you help?
+- Open the website and open the cookies in the developer tools thing.
+- Type in random username and password. Nothing happening to the cookies.
+- Open the source. Find the Script in the index.js.
+- Script is asynchronous. Don't Know what is happening to the promise. It waits for the window to load then selects the form element and adds a submit eventListener to it and  prevents the default behaivour of the submit button. creates a r variable to store some values to select the input fields in the form and get their values.
+- After getting the values from the input fields it base64 encodes them and then removes the padding = with nothing.
+- So the in base64 encoded with some padding at end which is been replaced username: "YWRtaW4" password: "cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ"
+- Further in the script we see that our flag is base64 decoded form of the password. But we cannot directly decode the thing since there might be some padding which has been replace with a empty string and will get error if try to do it.
+- I created this small python [program](/solution/login.py) run it and then input the password [here] and you will get the flag.
+- flag: picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
+</details>
+
 
 <details>
 <summary>Template</summary>
