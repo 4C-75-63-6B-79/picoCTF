@@ -449,6 +449,49 @@
 - flag: picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
 </details>
 
+<details>
+<summary>advanced-potion-making</summary>
+
+### advanced-potion-making
+- Downloaded the file. I had no extension.
+- Opened the file in [online hex editor](https://hexed.it/). Saw the IHDR word in the hex editor googled it found [PNG Wikipedia page](https://en.wikipedia.org/wiki/PNG).
+- This might be some kind of PNG file which is changed in some way. I have now idea of how to figure it out. There are no hints also.
+- Looked at the initial few hex digits they were different from what was shown in the wikipedia file format.
+- It might be that the initial bits are changed as they were also changed in one of the previous challenges.
+- I also noticed in the hex editor is that there is a lot of XT kind of symbols in the beginning and similarly L2U kind of symbols at the end of the file. My guess is that the file has been padded with some kind of data.
+- Googled the problem.
+- Found this [writeup](https://www.ctfwriteup.com/picoctf/picomini-by-redpwn/forensics) which had changed the bits. I also did the same using the wikipedia page.
+- Opened the file in the paint. I was all red colour and no flag was there.
+- The next step in the ctf write up is to use stegsolve to find the flag.
+- Watched this [video](https://www.youtube.com/watch?app=desktop&v=MJK6rvOSPPE)
+- I was not able to understand any of their solution with all the color change and the stegsolve things.
+- So I wrote my own [solution](/solution/advanced_potion_making.py) and provided the explanation. 
+### Program Description
+- **Objective**
+    - We know that the flag is hidden in the image. 
+    - But the pixel value of the flag is very similar to the background color. 
+    - So what we have to do is to make the difference between the flag pixel value and the background color very large. 
+    - It is like flag is written on a 'white paper' with 'almost white ink'. 
+    - So we have to do is to make the 'white paper' black and 'almost white ink' completely white. 
+    - We cannot do this with naked eye but a computer can do this since it works with pixel value.
+- **My Approach**
+    - What I did is that I first is to run to through all the individual pixel of the image and store the pixel value of the unique pixel with number of times they occured in the image.
+    - Then run through the individual pixel of the image again and find the percentage of this pixel value present in the image using the our previous recorded value of the number of times the various pixel occured in the image.
+    - If the percentage of the current pixel is more than 50% then this is a background pixel and we store a black pixel in the new image at the same position
+    - If the precentage of the current pixel is less than 50% we store a white pixel at the same position in the new image.
+    - After doing the above we store the new image on the disk.
+- **Instructions**
+    - To run my [solution](/solution/advanced_potion_making.py) you will have to make few setups.
+    - You need to have pip installed in the computer. You can find more about it [here](https://pypi.org/project/pip/).
+    - Using pip install the pillow module. You can find the instructions to do so [here](https://pillow.readthedocs.io/en/latest/installation.html).
+    - Now you have to do is take the uncorrupted copy of the image in a folder.
+    - Name the folder to "solution" else change path in the program.
+    - Name the image as 'image.png'
+    - Then run the program.
+    - You will get a new image with name ["image_with_flag.png"](/flag_images/image_with_flag.png).
+    - **Sorry** if this solution does not work for you.
+- flag: picoCTF{w1z4rdry}
+</details>
 
 <details>
 <summary>Template</summary>
