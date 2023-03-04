@@ -494,6 +494,44 @@
 </details>
 
 <details>
+<summary>spelling-quiz</summary>
+
+### spelling-quiz
+- Downloaded the file to my system.
+- Unzip to find 3 files encrypt.py, flag.txt, study-guide.txt
+- Opened the encrypt.py.
+- Seeing the various things in program we try to run the program in piece form and try to understand what it is doing.
+- On looking at the first files variables I googled what does a for loop inside a list do and found this [stackoverflow post](https://stackoverflow.com/questions/11479392/what-does-a-for-loop-within-a-list-do-in-python). This post has examples which explains very nicely what the for loops do.
+- os.walk(path) is a method which take a path as argument and then loops through all the file and subfolders in that path and all the files and folder in the subfolder. It basically travels all of the directory tree.
+- You can find a very good explanation of os.walk() in the book **Automate the boring stuff with python** chapter 10.
+- In the program encrypt.py the loops in files list are going through all the files of the current directory and checking the specific file is a .txt file if so then they are storing the realtive path of that file in the files list.
+- In next line we are storing english alphabets as list in variable alphabet.
+- We are then shuffling the alphabet list and stroing the shuffled list in the variable shuffled using **[walrus operator](https://medium.com/mlearning-ai/when-and-why-to-use-over-in-python-b91168875453#:~:text=The%20walrus%20operator%20is%20denoted,the%20processing%20of%20large%20data.)**. 
+- It then creates a dictionary form alphabet and shuffled list.
+- It then loops through all the .txt file in the list files
+- Reads all the text in each file and then replaces all the characters using the key value pairs in the dictionary and then writes it back into the original file. Like for key 'a' in dictionary the value may be 'm' depending on the shuffle then the after encryption all the a in the text file will be replaced by m. 
+- The character in the file is not present in the text it is kept as it is.
+- The value which is stored in variable encrypted is written in a fancy way. I have written it's simplified form below.
+
+```
+    encrypted_list = [];
+    for c in text:
+        if c in dictionary:
+            encrypted_list.append(dictionary[c])
+        else:
+            encrypted_list.append(c);
+    encrypted = "".join(encrypted_list);
+```
+
+- The value stored in the variable encrypted is then written in the file.
+- So now I understand how the things are getting encrypted it is time to get the flag.
+- File flag.txt has our flag in the encrypted form.
+- 
+
+
+</details>
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
