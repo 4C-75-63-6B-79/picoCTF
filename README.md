@@ -526,8 +526,14 @@
 - The value stored in the variable encrypted is then written in the file.
 - So now I understand how the things are getting encrypted it is time to get the flag.
 - File flag.txt has our flag in the encrypted form.
-- 
-
+- study-guides.txt has bunch of string which are encrypted.
+- I was looking at the strings and saw this string "bwttxnlrv" which looks quite similar to the butterfly as length is same.
+- The above problem is very difficult since every time shuffle is going to generate new dictionary.
+- I looked at this [writeup](https://github.com/jon-brandy/CTF-WRITE-UP/blob/5b947ed4ee2de28aa10675fa1ec5c11fe4ed8d48/Asset/spelling-quiz/README.md)
+- It suggested to use [this](https://github.com/jon-brandy/CTF-WRITE-UP/blob/5b947ed4ee2de28aa10675fa1ec5c11fe4ed8d48/Asset/spelling-quiz/README.md) online tool to solve the problem and also gave instructions of how to use it in the writeup.
+- It give text on solving perhaps the dog jumped over was just tired.
+- We just have to replac space with _ and put it in picoCTF{}
+- flag: picoCTF{perhaps_the_dog_jumped_over_was_just_tired}
 
 </details>
 
