@@ -538,6 +538,18 @@
 </details>
 
 <details>
+<summary>Glitch cat</summary>
+
+### Glitch Cat
+- Looking from the title we can see the thing might be related to the command cat.
+- On running the net cat command we get this text 'picoCTF{gl17ch_m3_n07_' + chr(0x39) + chr(0x63) + chr(0x34) + chr(0x32) + chr(0x61) + chr(0x34) + chr(0x35) + chr(0x64) + '}'.
+- Guessing from the text we can see that there is some string and the bits with chr.
+- The text in the brackets might be hexadecimal. And we can then convert the hexadecimal to the int values which might be the ASCII value that might be our flag.
+- Created [this](./solution/glitch_cat.py) program to convert the hex value to string char. Replace the chr thing with the string values from the program.
+- flag: picoCTF{gl17ch_m3_n07_9c42a45d}
+</details>
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
