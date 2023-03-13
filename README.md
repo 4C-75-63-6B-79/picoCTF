@@ -550,6 +550,16 @@
 </details>
 
 <details>
+<summary>convertme.py</summary>
+
+### convertme.py
+- Question mentions to convert the given number from decimal to binary to flag.
+- Run the python script it asked to me to convert 92 from decimal base to binary. Entered 1011100 which is 92 in binary. Got the flag.
+- flag: picoCTF{4ll_y0ur_b4535_722f6b39}
+</details>
+
+
+<details>
 <summary>Template</summary>
 
 ### Things to add
