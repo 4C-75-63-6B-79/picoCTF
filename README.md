@@ -558,6 +558,18 @@
 - flag: picoCTF{4ll_y0ur_b4535_722f6b39}
 </details>
 
+<details>
+<summary>fixme1.py</summary>
+
+### fixme1.py
+- Question mentions to find the syntax error in python program to print the flag.
+- To do this we can run the python script and then the computer will tell us where the error and we can then go from there.
+- The syntax error is in line 20 and the error is unexpected indent.
+- Print statement was indented. Removed the indent. Ran the script again.
+- Got the flag.
+- flag: picoCTF{1nd3nt1ty_cr1515_182342f7}
+</details>
+
 
 <details>
 <summary>Template</summary>
