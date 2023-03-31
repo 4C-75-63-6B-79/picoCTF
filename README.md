@@ -572,10 +572,48 @@
 
 
 <details>
-<summary>Template</summary>
+<summary>Codebook</summary>
 
-### Things to add
-- content
+### Codebook
+- Dowloaded the two files and ran the code got the flag. I don't understand why this problem is so simple.
+- flag: picoCTF{c0d3b00k_455157_7d102d7a}
+#### Program Description
+- But my brain was not quiet and guilt tripping me that this is not the way to do things and we need to really know what is happening in the thing.
+- So we are here. I opened the file in the editor.
+- There is main function which call the print_flag function which is opening the file codebook.txt. So I directly pasted the text form the codebook.txt file in the varible codebook and removed the import and the try blocks and ran the program to see if it still works and it does.
+- It is then taking the character at specific index and then storing in the variable in the password. Printed the password and this was what is storing ```chthonian```.
+- This call the str_xor function with encoded flag and password as the argument.
+- We move the str_xor function. There the key that is password in stored in a varibale name new_key.
+- Then we run a while loop to make the new_key variable lenght same as the length of the encoded flag which is stored in the variable named secret.
+- We increase the length of the new_key by adding the characters of the key to the back using variable i and making sure it does not go above the length of the the key by modding it.
+- In the return statement we are doing is XOR operation on the ASCII value of the characters of the two word stored in variable secret and new_key respectively and at same index.
+- ```
+    secret = "_^☻>ZV]E]X1^♣_SZ►_♫‼"
+    new_key = "chthonianchthonianchthonianchthon"
+    dict_secret_key = zip(secret, new_key) # creates a dictionary with characters of secret as key and of new_key as values
+    flag = []
+    for (secret_c, new_key_c) in dict_secret_key:
+        charc = chr(ord(secret_c) ^ ord(new_key_c)) # XOR operation on the ASCII values
+        flag.append(charc) # storing each flag character in the list flag
+    print("".join(flag)) # joining the flag to form a string.
+```
+- The most important thing here is that though by couting the characters in the secret and the new_key we can see the characters in the new_key are more than in the secret. So I don't understand why the while loop entered so many characters in the new_key.
+- I think this may be something to do with the bytes used to store the ASCII values of the characters.
+- Like if we run ```ord('☻')``` we get a number 9787 which cannot stored in single byte. So we need more bytes so the length of the string secret is 33 though it has less characters in it.
 </details>
 
+<details>
+<summary>PW Crack 2</summary>
 
+## Descritption
+- Wget the python file and the flag into the webshell
+- Open the python program in the nano.
+- We see that the password is being compared to some hexadecimal string.
+- So we can print those string to get the password.
+- ``` print(chr(int('0x33', 16)),chr(int('0x39', 16)),chr(int('0x63', 16)),chr(int('0x65', 16))) ```
+- Enter the above command before the program ask for the pasword and replace the hex characters with the one in the if conditions. Save the file and then run the program.
+- You will then have to enter the printed string as passowrd and make sure to remove the space since the comma in print statement add space.
+- You will then get the flag.
+- flag: picoCTF{tr45h_51ng1ng_502ec42e}
+
+</details>
