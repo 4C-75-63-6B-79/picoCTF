@@ -596,7 +596,7 @@
         charc = chr(ord(secret_c) ^ ord(new_key_c)) # XOR operation on the ASCII values
         flag.append(charc) # storing each flag character in the list flag
     print("".join(flag)) # joining the flag to form a string.
-```
+    ```
 - The most important thing here is that though by couting the characters in the secret and the new_key we can see the characters in the new_key are more than in the secret. So I don't understand why the while loop entered so many characters in the new_key.
 - I think this may be something to do with the bytes used to store the ASCII values of the characters.
 - Like if we run ```ord('☻')``` we get a number 9787 which cannot stored in single byte. So we need more bytes so the length of the string secret is 33 though it has less characters in it.
