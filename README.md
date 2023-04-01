@@ -617,3 +617,31 @@
 - flag: picoCTF{tr45h_51ng1ng_502ec42e}
 
 </details>
+
+
+<details>
+<summary>PW Crack 2</summary>
+
+## Descritption
+Can you crack the password to get the flag?
+Download the password checker here and you'll need the encrypted flag and the hash in the same directory too.
+There are 7 potential passwords with 1 being correct. You can find these by examining the password checker script.
+
+## Steps
+- On wget the file in the webshell open the python file and then I tried to print the correct_pw_hash.
+- It was a hex string and did not understand much from it.
+- So then I tough of generating the md5 hash of all the possible given passwords.
+- I just used a for loop to do and called the level_3_pw_check function after the loop.
+- ```
+    pos_pw_list = ["6997", "3ac8", "f0ac", "4b17", "ec27", "4e66", "865e"]
+
+    for i in pos_pw_list:
+            print(hash_pw(i), i)
+
+    level_3_pw_check()
+  ```
+- The above loop printed all the password and their hashes and looking at the correct password hash printed I got the correct password.
+- flag: picoCTF{m45h_fl1ng1ng_2b072a90}
+
+
+</details>
