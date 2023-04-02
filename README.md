@@ -645,3 +645,22 @@ There are 7 potential passwords with 1 being correct. You can find these by exam
 
 
 </details>
+
+<details>
+<summary>PW Crack 4</summary>
+
+## Descritption
+Can you crack the password to get the flag?
+Download the password checker here and you'll need the encrypted flag and the hash in the same directory too.
+There are 100 potential passwords with only 1 being correct. You can find these by examining the password checker script.
+
+## Steps
+- Wget all the files in the webshell
+- Then open the python file in nano.
+- Change the function definition of level_4_pw_check to ``` def level_4_pw_check(hash_pass):```
+- Instead of taking the input from user store the function parameter hash_pass in the user_pw variable.
+- Now remove the call to the level_4_pw_check function.
+- Under the list pos_pw_list make a for loop and iterate over all the elements of the pos_pw_list and call the function level_4_pw_check and pass the element as function parameter in this function call and you will get the flag.
+- In this for loop we are entering all the passwords instead of taking any input from the user.
+- flag: picoCTF{fl45h_5pr1ng1ng_ae0fb77c} 
+</details>
