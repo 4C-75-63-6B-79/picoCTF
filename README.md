@@ -664,3 +664,21 @@ There are 100 potential passwords with only 1 being correct. You can find these 
 - In this for loop we are entering all the passwords instead of taking any input from the user.
 - flag: picoCTF{fl45h_5pr1ng1ng_ae0fb77c} 
 </details>
+
+<details>
+<summary>PW Crack 5</summary>
+
+## Descritption
+Can you crack the password to get the flag?
+Download the password checker here and you'll need the encrypted flag and the hash in the same directory too. Here's a dictionary with all possible passwords based on the password conventions we've seen so far.
+
+## Steps
+- Wget all the files in the webshell
+- Then open the python file in nano.
+- Change the function definition of level_5_pw_check to ``` def level_5_pw_check(hash_pass):```
+- Instead of taking the input from user store the function parameter hash_pass in the user_pw variable.
+- Now remove the call to the level_4_pw_check function.
+- Now read all the lines of the dictionary file into the a variable as list and iterate over the elements of the entire list. Call the function level_5_pw_check and pass the first four characters of the element as function parameter in this function call and you will get the flag.
+- In this for loop we are entering all the passwords instead of taking any input from the user.
+- flag: picoCTF{h45h_sl1ng1ng_36e992a6} 
+</details>
