@@ -682,3 +682,17 @@ Download the password checker here and you'll need the encrypted flag and the ha
 - In this for loop we are entering all the passwords instead of taking any input from the user.
 - flag: picoCTF{h45h_sl1ng1ng_36e992a6} 
 </details>
+
+<details>
+<summary>Serpentine</summary>
+
+## Descritption
+Find the flag in the Python script!
+Download Python script
+
+## Steps
+- Downloaded the python file on my machine and opened it in vscode.
+- On looking at the file we can see we have to enter the options values to get the flag but when we enter option b the print_flag function call is missing so we can add that function call in the elif condition for b and then run the file to see what happens.
+- Doing so we get the flag. Though the python program is doing other things too but I did not care to look into it so sorry.
+- flag: picoCTF{7h3_r04d_l355_7r4v3l3d_ae0b80bd}
+</details>
