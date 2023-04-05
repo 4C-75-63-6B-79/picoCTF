@@ -696,3 +696,19 @@ Download Python script
 - Doing so we get the flag. Though the python program is doing other things too but I did not care to look into it so sorry.
 - flag: picoCTF{7h3_r04d_l355_7r4v3l3d_ae0b80bd}
 </details>
+
+<details>
+<summary>basic-mod1</summary>
+
+## Descritption
+We found this weird message being passed around on the servers, we think we have a working decryption scheme.
+Download the message here.
+Take each number mod 37 and map it to the following character set: 0-25 is the alphabet (uppercase), 26-35 are the decimal digits, and 36 is an underscore.
+Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_message})
+
+## Steps
+- I downloaded the message file on my machine.
+- Then I wrote the python script to do what they told in the description.
+- This is the python [program](./solution/basic_mod.py). You can run the program and then copy and paste the message text and then it will give the flag.
+- flag: picoCTF{R0UND_N_R0UND_ADD17EC2}
+</details>
