@@ -709,6 +709,25 @@ Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_m
 ## Steps
 - I downloaded the message file on my machine.
 - Then I wrote the python script to do what they told in the description.
-- This is the python [program](./solution/basic_mod.py). You can run the program and then copy and paste the message text and then it will give the flag.
+- This is the python [program](./solution/basic_mod1.py). You can run the program and then copy and paste the message text and then it will give the flag.
 - flag: picoCTF{R0UND_N_R0UND_ADD17EC2}
+</details>
+
+<details>
+<summary>basic-mod2</summary>
+
+## Descritption
+A new modular challenge!
+Download the message here.
+Take each number mod 41 and find the modular inverse for the result. Then map to the following character set: 1-26 are the alphabet, 27-36 are the decimal digits, and 37 is an underscore.
+Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_message})
+
+## Steps
+- I downloaded the message file on my machine.
+- You can read more about the modular inverse of number on [Khan Acadmey Modular Inverse](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-inverses).
+- I wrote the python script to do what they told in the description using the naive method from the **Khan Acadmey** article.
+- This is the python [program](./solution/basic_mod2.py). You can run the program and then copy and paste the message text and then it will give the flag.
+- The problem is that that the Khan acadmey article said it was a naive method so I googled how to find the modular inverse and found this [video](https://www.youtube.com/watch?v=KqoIlojTrmw) which is the solution to this challenge. It helped to see if I was doing something wrong. 
+- In video they used the pow function to find the modular inverse. So got a better way.
+- flag: flag: picoCTF{1NV3R53LY_H4RD_DADAACAA}
 </details>
