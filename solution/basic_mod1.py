@@ -1,4 +1,4 @@
-message = input('Enter the message numbers seprated by space: ');
+message = input('Enter the message numbers seprated by space: ').strip();
 
 message_list = message.split(" ");
 
