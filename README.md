@@ -731,3 +731,20 @@ Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_m
 - In video they used the pow function to find the modular inverse. So got a better way.
 - flag: flag: picoCTF{1NV3R53LY_H4RD_DADAACAA}
 </details>
+
+<details>
+<summary>credstuff</summary>
+
+## Descritption
+We found a leak of a blackmarket website's login credentials. Can you find the password of the user cultiris and successfully decrypt it?
+Download the leak here.
+The first user in usernames.txt corresponds to the first password in passwords.txt. The second user corresponds to the second password, and so on.
+
+## Steps
+- Download the file and then extract the file.
+- I wrote [this python program](/solution/credstuff.py) which reads the passwords and the usernames txt file and the create a dictionary and the find the passwords of the username "cultiris" and prints it.
+- The passwords looks some kind of the ceaser cipher. Copy that password and use [this ceaser cipher](/solution/trivial_Flag_transfer.py) program to get all the ceaser cipher with all the 26 keys.
+- Run the program and paste the password as input and you will get 26 deciphered text one is going to be the flag with picoCTF{...}.
+- flag: picoCTF{C7r1F_54V35_71M3}
+
+</details>
