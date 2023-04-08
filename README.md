@@ -748,3 +748,17 @@ The first user in usernames.txt corresponds to the first password in passwords.t
 - flag: picoCTF{C7r1F_54V35_71M3}
 
 </details>
+
+<details>
+<summary>Enhance!</summary>
+
+## Descritption
+Download this image file and find the flag.
+Download image file
+
+## Steps
+- Dowloaded the svg file opened it saw a concentric black and white circle.
+- Opened the svg in browse and inspected it.
+- Expanded the text element there was flag in the tspan elements.
+- flag: picoCTF{3nh4nc3d_aab729dd}
+</details>
