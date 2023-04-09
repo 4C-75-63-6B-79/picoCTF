@@ -762,3 +762,20 @@ Download image file
 - Expanded the text element there was flag in the tspan elements.
 - flag: picoCTF{3nh4nc3d_aab729dd}
 </details>
+
+<details>
+<summary>file-run1</summary>
+
+## Descritption
+A program has been provided to you, what happens if you try to run it on the command line?
+Download the program here.
+
+## Steps
+- Wget the file in the webshell.
+- I tried running the file using ./run but got the error of permission denied.
+- Since in problem it is written we have to run the file using the command line so I tried to make it a executable that I learned in the course [missing semester of CS](https://missing.csail.mit.edu/).
+- To make a file executable we have to run the command ```chmod +x filename```.
+- Then I ran the file with just typing the name of the file in the terminal.
+- It printed out the flag.
+- flag: picoCTF{U51N6_Y0Ur_F1r57_F113_9bc52b6b}
+</details>
