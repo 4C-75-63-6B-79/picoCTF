@@ -779,3 +779,31 @@ Download the program here.
 - It printed out the flag.
 - flag: picoCTF{U51N6_Y0Ur_F1r57_F113_9bc52b6b}
 </details>
+
+<details>
+<summary>file-run2</summary>
+
+## Descritption
+Another program, but this time, it seems to want some input. What happens if you try to run it on the command line with input "Hello!"?
+Download the program here.
+
+## Steps
+- Wget the file in the webshell.
+- Try to run the file with the ./filename got permission denied.
+- Do the chmod thing to make the file executable with ```chmod +x filename```.
+- Then again run the file. Got error run file with the text thing.
+- Problem tells us to run the file with the input text.
+- Tried to pipe the text into the run nothing happened.
+- Then googled how to run a executable with the text as input. Got answer ```./filename text```
+- Did this and got the flag.
+- flag: picoCTF{F1r57_4rgum3n7_96f2195f}
+</details>
+
+<details>
+<summary>template</summary>
+
+## Descritption
+
+## Steps
+
+</details>
