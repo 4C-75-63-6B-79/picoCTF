@@ -807,3 +807,17 @@ Download the program here.
 ## Steps
 
 </details>
+
+<details>
+<summary>Inspect HTML</summary>
+
+## Descritption
+Can you get the flag?
+Go to this website and see what you can discover.
+
+## Steps
+- Went to the website link. 
+- The name of the problem said to inspect the html and that is what I did by pressing F12.
+- Looked in the html and the flag was there in in comment in plain text.
+- flag: picoCTF{1n5p3t0r_0f_h7ml_8113f7e2}
+</details>
