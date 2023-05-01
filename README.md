@@ -799,14 +799,6 @@ Download the program here.
 - flag: picoCTF{F1r57_4rgum3n7_96f2195f}
 </details>
 
-<details>
-<summary>template</summary>
-
-## Descritption
-
-## Steps
-
-</details>
 
 <details>
 <summary>Inspect HTML</summary>
@@ -820,4 +812,39 @@ Go to this website and see what you can discover.
 - The name of the problem said to inspect the html and that is what I did by pressing F12.
 - Looked in the html and the flag was there in in comment in plain text.
 - flag: picoCTF{1n5p3t0r_0f_h7ml_8113f7e2}
+</details>
+
+<details>
+<summary>Hurry up! Wait!</summary>
+
+## Descritption
+svchost.exe
+
+## Steps
+- Seeing it is exe file downloaded it on my pc and ran it my pc did not ran it.
+- wget the file in the webshell
+- Ran the strings command on it saw a bunch of strings with mention of secret message.
+- Tried to run it by making it an executable using the chmod and then ran it but there was some libraray missing.
+- When running the file on the webshell there was libgnat missing. Same thing was in the strings command list.
+- Googled the GNAT. Found that is provides the runtime components for the application produced with gnat.
+- Did not understand how to procced. Also did not do any problems for almost 20 days so kind of dumb so did googling.
+- Found [write](https://github.com/Dvd848/CTFs/blob/master/2021_picoCTF/Hurry_up_Wait.md) up which was using ghidra. I have been avoiding using this for no reason but now is the time to use it to do things nicely. Downloaded ghidra.
+- Installed ghidra then created a non shared project and then imported the svchost.exe file into and then opened that file in the code browser and the clicked analyze but I still don't get what was happening in it.
+- Found this [video](https://www.youtube.com/watch?v=IA2_9Pk9QTw&t=8s) in the youtube. I did not understand what he was doing.
+- Then i care fully read the [writeup](https://github.com/Dvd848/CTFs/blob/master/2021_picoCTF/Hurry_up_Wait.md) mentioned above.
+- Since in write it was mentioned that there are many functions and I was not able to see any so I went in the function folder in the program tree window and looked through the each function to find the list mentioned in the write up.
+- Found it under Function > FUN_0010 > FUN_00102 > FUN_001029 > FUN_0010298a.
+- I followed the write up which said that on opening each function there were DAT parameters and we have to look what that stores. In first function after calendar we can see that there is the first parameter which stores p.
+- Similary in the second function it stores c. So I did this manually to find all the various characters of flag.
+- I did the things manually but got the flag not correct. So I tried doing the whole thing again and got the flag.
+- flag: picoCTF{d15a5m_ftw_5c1d1ae}
+</details>
+
+<details>
+<summary>template</summary>
+
+## Descritption
+
+## Steps
+
 </details>
