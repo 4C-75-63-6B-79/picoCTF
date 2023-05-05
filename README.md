@@ -841,6 +841,50 @@ svchost.exe
 </details>
 
 <details>
+<summary>File types</summary>
+
+## Descritption
+This file was found among some files marked confidential but my pdf reader cannot read it, maybe yours can.
+You can download the file from here.
+
+## Steps
+- Downloaded the file on to my pc.
+- It is a pdf file. It may be that there may be something done to the hex values of the file.
+- Opened it in the hex editor and also opened the [wikipedia page](https://en.wikipedia.org/wiki/PDF) of file format pdf.
+- On opening the file in the hex editor we can see it may be a zip file since there is text mentioning to extract the contents of file.
+- Wget the file in the webshell. Tried to extract it using the unzip command in the webshell. But got error that it may be not a zip file.
+- I hurried up and did not read the text in the hex editor. There are instructions on how to extract file from this file.
+- Opened the file in nano and then read the instruction to edit the file. Saved it as FILE.
+- Then used the chmod command to make the file executable.
+- Ran the file and saw some arguments.
+- Ran the file again it had message the flie already exits. Used ls to see that there is a flag file there. 
+- Made the new flag file a executable and then ran it got nothing just syntax error.
+- Looked at the contents of the FILE. It is some kind of a shell script. I don't know how to really read shell scirpts. I have very little knowledge of scripting in shell. But I saw a if condition in which the argument number 1 denoted by $1 is being compared to something x-c. So I tried running the file with this argument and got the error of command not found.
+- I tried running various combination of arguments like trying to write the entire strings mentioned in console message. But I finally to decided to google it.
+- Found this [write up](https://www.it-sec.fail/picoctf-2022-forensics-file-types/) or watch this [video](https://www.youtube.com/watch?v=420mItn8bzo) for better explanation.
+- Since webshell did not have the cpio so I downloaded the file on to my machine and opened it on wsl ubunutu. Followed the things like shown in the video and got the flag.
+- flag: picoCTF{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_79b01c26}
+
+</details>
+
+<details>
+<summary>Unsolved ARMssembly 2</summary>
+
+## Descritption
+What integer does this program print with argument 3297082261? File: chall_2.S Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
+
+## Steps
+- Wget the thing into the webshell.
+- Made the file a executable using the chmod command. 
+- Then executed it to get a whole lot of command not found things.
+- Then tried to run the file by using the number in the problem description as input. Still got the same error message command not found.
+- Thought to use the ghidra on this. But was a waste attempt as it is a txt file which I came to know after running exiftool on it.
+- 
+
+</details>
+
+
+<details>
 <summary>template</summary>
 
 ## Descritption
