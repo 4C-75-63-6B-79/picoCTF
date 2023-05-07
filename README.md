@@ -868,6 +868,28 @@ You can download the file from here.
 </details>
 
 <details>
+<summary>Lookey Here</summary>
+
+## Descritption
+Attackers have hidden information in a very large mass of data in the past, maybe they are still doing it.
+Download the data here.
+
+## Steps
+- Wget the data into the webshell.
+- Since it was a text file a simply cat it and then pipe it into the less to see it.
+- I had random occurences of the charcters in <E2><80><> all over the place. The other 2 characters in the remaining brackets were changing.
+- Those other two characters looked like hex characters.
+- So I thought to use the grep command to get all the occurences of the E2 thing but it did not work for I don't know what reason. 
+- So I googled the <E2><80> thing and googling found [this](https://www.utf8-chartable.de/unicode-utf8-table.pl?start=8192&number=128). So these are some kind of characters. 
+- First one is <E2><80><94>. It is some kind of dash. I don't know what. 
+- On looking futher I saw things like 7-2521 and it was occuring several times.
+- On opeing the thing in nano all those things of e2 type were gone. I don't know why.
+- Then I googled some things that were reoccuring like Liberty 5-3000 and found [this](https://www.cliffsnotes.com/literature/a/anthem/character-analysis/liberty-53000-gaea). There are others like this like Faternity, Solidarity. I don't know what do with this.
+- Was doing the grep on the various reoccuring things like liberity, fraternity and then I also remebered that there were some } randomly so did a grep on } and got the flag.
+- flag: picoCTF{gr3p_15_@w3s0m3_58f5c024}
+</details>
+
+<details>
 <summary>Unsolved ARMssembly 2</summary>
 
 ## Descritption
@@ -882,7 +904,6 @@ What integer does this program print with argument 3297082261? File: chall_2.S F
 - 
 
 </details>
-
 
 <details>
 <summary>template</summary>
