@@ -903,6 +903,31 @@ Run this Python program in the same directory as this encrypted flag.
 - flag: picoCTF{p47ch1ng_l1f3_h4ck_21d62e33}
 </details>
 
+
+<details>
+<summary>morse-code</summary>
+
+## Descritption
+Morse code is well known. Can you decrypt this?
+Download the file here.
+Wrap your answer with picoCTF{}, put underscores in place of pauses, and use all lowercase.
+
+## Steps
+- Downloaded the file. File is a audio file. As the name suggest it has mosrse code in it. I have seen it in movies how using dots and dash we can send information. But now I have to read the information.
+- So I first googled morse code and found this [wikipedia page](https://en.wikipedia.org/wiki/Morse_code#:~:text=Morse%20code%20is%20a%20method,the%20inventors%20of%20the%20telegraph.). 
+- I then thought of there might be a online morse code audio decoder so I googled that and then I found [morse code audio decoder](https://morsecode.world/international/decoder/audio-decoder-adaptive.html).
+- After uploading the audio file to the above site. I played the audio and site printed the message. 
+- Message was EET TT H 4 7 H 4 7 H 9 0 D W 2 0 U 9 H 7. The I formatted it as mentioned the problem and the flag was incorrect.
+- Tried a different online decoder it gave a different message. So I tried it's message and that was incorrect to. So I thought of doing it myself.
+- But it was hard as I was missing the dots and other things. Thought of slowing down the audio playback speed. Still missed things. Then thought of using some kind audio visualizer. Since we are dealing with like same audio. 
+- So I opened blender in video editing way then added the audio strip and turned on the display waveform.
+- Saw some long bloated bars and small ones and small gaps and big gaps.
+- Small bars dot and big one dash. Similary small gaps nothing but big gaps _. Below is the code shown with decoding. And the flag was correct this time.
+- .-- .... ....- --... _ .... ....- --... .... _ ----. ----- -.. _ .-- ..--- ----- ..- ----. .... --...
+- w     h    4     7   _  h    4       7    h  _   9     0    d  _  w    2     0    u    9     h    7
+- flag: picoCTF{wh47_h47h_90d_w20u9h7}
+</details>
+
 <details>
 <summary>Unsolved ARMssembly 2</summary>
 
@@ -927,3 +952,4 @@ What integer does this program print with argument 3297082261? File: chall_2.S F
 ## Steps
 
 </details>
+ 
