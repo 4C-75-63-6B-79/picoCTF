@@ -928,6 +928,23 @@ Wrap your answer with picoCTF{}, put underscores in place of pauses, and use all
 - flag: picoCTF{wh47_h47h_90d_w20u9h7}
 </details>
 
+</details>
+
+<details>
+<summary>Includes</summary>
+
+## Descritption
+Can you get the flag?
+Go to this website and see what you can discover.
+
+## Steps
+- Go to the website. Straight go the dev tools.
+- Nothing special there. So I press the say hello button. Just a alert comes.
+- There is this function greetings look there is the flag in css and the function.
+- flag: picoCTF{1nclu51v17y_1of2_f7w_2of2_b8f4b022}
+</details>
+ 
+
 <details>
 <summary>Unsolved ARMssembly 2</summary>
 
