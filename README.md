@@ -944,6 +944,23 @@ Go to this website and see what you can discover.
 - flag: picoCTF{1nclu51v17y_1of2_f7w_2of2_b8f4b022}
 </details>
  
+</details>
+
+<details>
+<summary>substitution0</summary>
+
+## Descritption
+A message has come in but it seems to be all scrambled. Luckily it seems to have the key at the beginning. Can you crack this substitution cipher?
+Download the message here.
+
+## Steps
+- Downloaded the message. It had bunch of text with some capital letters at the front. That may be the key mentioned in the problem.
+- The length of the capital letters is 26 so those are the substitution for each character at that index.
+- Wrote [this](./solution/substitution0.py) small python program to get the flag.
+- flag: picoCTF{5UB5717U710N_3V0LU710N_59533A2E}
+</details>
+ 
+
 
 <details>
 <summary>Unsolved ARMssembly 2</summary>
