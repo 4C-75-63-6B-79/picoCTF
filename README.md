@@ -979,6 +979,25 @@ This vault uses an XOR encryption scheme. The source code for this vault is here
 - Just paste the hex value in single line and run the code you will get the flag.
 - flag: picoCTF{n0t_mUcH_h4rD3r_tH4n_x0r_3ce2919}
 </details>
+
+<details>
+<summary>vault-door-7</summary>
+
+## Descritption
+This vault uses bit shifts to convert a password string into an array of integers. Hurry, agent, we are running out of time to stop Dr. Evil's nefarious plans! The source code for this vault is here: VaultDoor7.java
+
+## Steps
+- Dowloaded the file and looked at the code.
+- There was comment in the middle which holds the solution to the problem. So I read it several times until I understood what I was trying to tell me.
+- What we are being told in the comment is that if we have a 4 string password then we convert each of those ascii charcters to their hex representation and the those hex value can be converted to int which can be converted to binary form of and when all of those binary form are placed end to end we get a new binary string and we can convert that to a new integer so we have converted a 4 plain ascii character password to a interger. So we can convert a 32 plain ascii character password to a array of 8 integers.
+- So if we get the 8 integers then we can reverse the above process to get back the characters in password.
+- And those intergers are given to us in the checkPassword function.
+- So what we have to do is to convert each of those intergers to their binary representation of 32 bits and then divided that 32 bit to 4 bytes and then convert those bytes to plain ascii characters to get the password which will be our flag.
+- I made a [small python program](./solution/vault_door_7.py) to do the above. You will have to paste the return staement in the integerArray variable and then run the program and you will get the flag.
+- I am sorry for bad naming convention in the code and also if the code does not work for you. 
+- flag:  picoCTF{A_b1t_0f_b1t_sh1fTiNg_702640db5a}
+</details>
+
  
 
 
