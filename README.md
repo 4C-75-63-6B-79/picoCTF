@@ -959,6 +959,26 @@ Download the message here.
 - Wrote [this](./solution/substitution0.py) small python program to get the flag.
 - flag: picoCTF{5UB5717U710N_3V0LU710N_59533A2E}
 </details>
+
+<details>
+<summary>vault-door-6</summary>
+
+## Descritption
+This vault uses an XOR encryption scheme. The source code for this vault is here: VaultDoor6.java
+
+## Steps
+- Downloaded the program on my computer and looked at it.
+- What i saw that there were bunch of checks in the checkPassword function which when false return false. So I removed those checks along with the return false statement and ran the thing.
+- I did not do what I said in above line but I took a look again at the code a realized that doing the above thing will not print anything for me. So I saw those bunch of encoding of hex value and thought may be those are the flag character in hex.
+- So I went with the approach of printing those hex value in normal characters and that would be flag.
+- I did not do what I said above again and again took a look at the code. And saw that what ever password we are entering is getting converted to some bytes and then some xor function is happening with 0x55 and then that value after is getting subtracted with the value of the mybytes and if the result is not equal to 0 we get the false thing. So we might have to perfrom teh xor operation on the already stored hex value.
+- Changed the program and it got complied but got that error which I generally get when running java programs that is java.lang.classNotFoundException. Google about it to fix it.
+- Gave up and went to the webshell there the program ran in a single try and printed all the things after xor operation which looked like gibberish. Then tried printing the character of hex without xoring them with the 0x55 and got things which again looked like gibberish.
+- Due to reasons of not being able to run the program on my pc I tried to copy those hex value and perform xor operation on them and print the result in the plain ascii character using python.
+- This is the [python program](./solution/VaultDoor6.py) that I made to get the flag.
+- Just paste the hex value in single line and run the code you will get the flag.
+- flag: picoCTF{n0t_mUcH_h4rD3r_tH4n_x0r_3ce2919}
+</details>
  
 
 
