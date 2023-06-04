@@ -998,6 +998,23 @@ This vault uses bit shifts to convert a password string into an array of integer
 - flag:  picoCTF{A_b1t_0f_b1t_sh1fTiNg_702640db5a}
 </details>
 
+<details>
+<summary>vault-door-7</summary>
+
+## Descritption
+Apparently Dr. Evil's minions knew that our agency was making copies of their source code, because they intentionally sabotaged this source code in order to make it harder for our agents to analyze and crack into! The result is a quite mess, but I trust that my best special agent will find a way to solve it. The source code for this vault is here: VaultDoor8.java
+
+## Steps
+- Same thing we download the java file and look at it. It looks like the code has be badly formatted to be like a paragraph and hard to interpret. So we have to fromat it in a good way. Best way to do this is to find the semicolons and press enter after them.
+- I correctly formatted the code and saw there is a function check password which calls a function to scramble the password characters and stores it in a array and it then compares it with the array of the expected password array.
+- So we know the characters of the password which are in the expected array. We just have to find the order.
+- The order is not being changed they are trying to mess with the bits. I understood what they are doing the switch bits function but I did not under stand how to reverse it. So i looked at solution in google.
+- This [solution](https://github.com/Dvd848/CTFs/blob/master/2019_picoCTF/vault-door-8.md) I looked at. I felt really stupid because I could not think that we could reverse it by reversing the order of the scramble function and I did not even try it. ** I am stupid dumb and useless and not worth anything and a burden on this earth **.
+- I did the reversing thing and ran the code got a bunch of gibberish. Then realized that I did not order the switch bits statement correctly.
+- Finally did the thing correctly and got the flag. My solution is [here](/solution/vault_door_8.java)
+- flag: picoCTF{s0m3_m0r3_b1t_sh1fTiNg_91c642112}
+</details>
+ 
  
 
 
