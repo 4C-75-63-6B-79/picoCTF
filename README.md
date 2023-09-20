@@ -1014,6 +1014,18 @@ Apparently Dr. Evil's minions knew that our agency was making copies of their so
 - Finally did the thing correctly and got the flag. My solution is [here](/solution/vault_door_8.java)
 - flag: picoCTF{s0m3_m0r3_b1t_sh1fTiNg_91c642112}
 </details>
+
+<details>
+<summary>ASCII Numbers</summary>
+
+## Descritption
+Convert the following string of ASCII numbers into a readable string:
+## Steps
+- This was easy. I copied the hex values and pasted them in this [program](./solution/ascii_number.py).
+- The explanation is given in the program as comments.
+- Ran the program and got the flag.
+- flag: picoCTF{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_445d4180}
+</details>
  
  
 <details>
