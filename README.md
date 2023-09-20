@@ -1016,7 +1016,21 @@ Apparently Dr. Evil's minions knew that our agency was making copies of their so
 </details>
  
  
+<details>
+<summary>ASCII FTW</summary>
 
+## Descritption
+This program has constructed the flag using hex ascii values. Identify the flag text by disassembling the program.
+You can download the file from here.
+
+## Steps
+- Downloaded the file on the web terminal using wget command
+- Then ran the nano and cat command on it. It was all gibberish to me.
+- Ran the file command on it. Found the Elf 64 bit pie executable. Google it and found this stack exchange [page](https://reverseengineering.stackexchange.com/questions/3815/reversing-elf-64-bit-lsb-executable-x86-64-gdb).
+- Read the above the page but couldn't not under stand anything since I am a dumb duffer. So that is that.
+
+
+</details>
 
 <details>
 <summary>Unsolved ARMssembly 2</summary>
