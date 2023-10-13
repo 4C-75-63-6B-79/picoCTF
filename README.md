@@ -1048,6 +1048,37 @@ Disassemble this.
 
 </details>
  
+
+<details>
+<summary>GDB baby step 2</summary>
+
+## Descritption
+Can you figure out what is in the eax register at the end of the main function? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}.
+Disassemble this.
+
+## Steps
+- I don't know if this is some mistake but this problem look quite similar to gdb baby step 1.
+- So I downloaded the file and opened it in the ghidra same as the baby step 1 problem.
+- Did the same things and in the gdb baby step 1 and found but under eax register there are some functions called. 
+- When I click on main there a function that open in the decomplie section on the right hand side.
+- It has 2 variable local_c and local_10. In local_c 123098 is stored and local_10 is used as counter variable in for loop. Loop runs for 607 times.
+- Value of variable local_10 is added to the valueo of local_c in each iteration. So basically the sum of number from 0 to 606 is added to the local_c. So we can use the formula to find the sum of a numbers in arithmetic progression. Formula is mentiond below.
+- ``` 
+    s = n * ( 2 * a + (n - 1) * d) / 2
+    s = sum
+    n = n th term in the arithmetic progression
+    a = first term in the arithmetic progression
+    d = difference between 2 consecutive intergers in arithmetic progression
+    s = 607 * ( 2 * 0 + (607 - 1) * 1) / 2
+    s = 607 * 303
+    s = 183921
+```
+- So above value is added to the local_c value so 123098 + 183921 = 307019
+- Let's try this as a flag for the question and see our efforts fail. And it worked well thank someone not god.
+- It was just luck. I think this is enough luck for one day. Now I go to study g d and t by bom pe
+- flag: picoCTF{307019}
+
+</details>
  
 <details>
 <summary>ASCII FTW</summary>
