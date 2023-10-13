@@ -1027,6 +1027,27 @@ Convert the following string of ASCII numbers into a readable string:
 - flag: picoCTF{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_445d4180}
 </details>
  
+
+ <details>
+<summary>GDB baby step 1</summary>
+
+## Descritption
+Can you figure out what is in the eax register at the end of the main function? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}.
+Disassemble this.
+
+## Steps
+- I have not solve pico ctf in a while so little rusty now. Downloaded the file on my pc.
+- So opened the file in ghidra. I know this since I read about ghidra long before and it is used to disassemble files so in problem it is said to disassemble so I just opened the file in ghidra. 
+- If you don't know how to open file in ghidra then you open it and create a non shared project and then drag and drop the thing. Sorry for bad explantion. You can google it and you will get the process. I also don't remeber the correct process just pressed a bunch a buttons and things seem ed to work fine.
+- After opening the thing there were a bunch of assembly language and I have no idea what it means. So I started sniffing through the things.
+- Questions says to find the eax register after main. I have no idea what eax register is. But I do know right now I have to find main and I will find the eax register. I went on the sidebar and saw for thing that I can click on and found the symbol tree.
+- It had exports imports thing so I started pressing each of the options and found the main under f in the exports. Clicked on main and it took me to the main function in the code. And then I saw EAX on the fifth line under main and it had some hexadecimal number by side of it. I hovered over it and the number was 549698 in it's decimal form. 
+- I saw the question mentioned to present the hexadecimal number in form of decimal form. So I submitted the flag in format mentioned in the question. And that was the flag. 
+- I know my explanation is the not the most detailed and is vague. But what we need to do is press a bunch of buttons until something and keep on repeating this until we get what want. And in process of pressing bunch of button we may learn a few things along the way. Sorry for my useless explantion.
+- flag: picoCTF{549698} 
+
+</details>
+ 
  
 <details>
 <summary>ASCII FTW</summary>
