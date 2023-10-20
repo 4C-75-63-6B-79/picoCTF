@@ -1079,6 +1079,32 @@ Disassemble this.
 - flag: picoCTF{307019}
 
 </details>
+
+
+<details>
+<summary>GDB baby step 3</summary>
+
+## Descritption
+Now for something a little different. 0x2262c96b is loaded into memory in the main function. Examine byte-wise the memory that the constant is loaded in by using the GDB command x/4xb addr. The flag is the four bytes as they are stored in memory. If you find the bytes 0x11 0x22 0x33 0x44 in the memory location, your flag would be: picoCTF{0x11223344}.
+Debug this.
+
+## Steps
+- I am back again after a week since I have time table in which pico is today. So let's see if this day is going be good or not depending on the problem we are able to solve.
+- Downloaded the file on my system.
+- Opened the file in ghidra as per usual since we are doing the GDB baby step.
+- Amazing, I did the usual things I did earlier and nothing showed up the window. So we are off to a difficult start here so let's see what happens next. Off to learning and googling.
+- But before doing the above thing I decided to redo my usual process again and this time I got a lot of things in the code browser.
+- I re read the question again and found that it is tell that some hex number is loaded into the main function and we need to use some gdb command to examine the memory byte wise.
+- Now reading this fact made to know how to convert a hexadecimal to interger so I started looking through my old stuff and found the way. Now on to the problem.
+- Thought to look around in Ghidra to find the command mentioned in the problem. Then looking around I thought that I haven't not even looked into the main function so I went into symbol tree and went main.
+- In decomplie window the main function opened in which it was returing a hexadecimal number. The number was 0x2262c96b. I converted this to integer using python '''int("0x2262c96b",16)'''. It is 576899435.
+- Don't know what to do with above thing while looking around interface found button named show entropy. Thought it will show me the thermodynamic entropy but not it did something to window and I turned it back off.
+- I saw the above mentioned in the window with something mov return in front off it. Below that there were 4 bytes. And in question they mentioned something about 4 bytes. So like guess work I tried to enter those 4 bytes in the format of the flag. The bytes were 6b c9 62 22. And to my surprise it worked.
+- Still this is bad practice. Since the problem aim was to introduce us to the command. So I decided to google about the command. And found this [website](https://visualgdb.com/gdbreference/commands/x). Reading the contents of this website I found out that this exercise to learn the GDB complier not the ghidra. So all my problems are done in wrong way.
+- Sorry.
+- flag: picoCTF{0x6bc96222}
+
+</details>
  
 <details>
 <summary>ASCII FTW</summary>
